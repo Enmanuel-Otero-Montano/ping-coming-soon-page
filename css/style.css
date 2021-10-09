@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.header,
+.main,
+.footer {
+    width: 86%;
+}
+
+.header {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.advancement {
+    font-size: 28px;
+}
+
+.advancement span {
+    font-weight: 300;
+    color: hsl(0, 0%, 59%);
+}
+
+.subscription {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: hsl(209, 33%, 12%);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+/* Estilos en comunes para los inputs */
+
+.input {
+    width: 92%;
+    height: 45px;
+    border-radius: 35px;
+}
+
+.email {
+    margin-bottom: 25px;
+    padding-left: 10px;
+    font-size: 14px;
+    border: solid 1px hsl(223, 100%, 88%);
+}
+
+::placeholder {
+    padding-left: 20px;
+    font-size: 12px;
+    opacity: .5;
+
+}
+
+.submit {
+    font-size: 14px;
+    font-weight: 600;
+    background-color: hsl(223, 87%, 63%);
+    border: inherit;
+    color: hsl(0, 0%, 100%);
+}
+
+/* Estilos para todo lo que tiene que ver con introducir un email no válido */
+
+.invalid {
+    border: solid 1.5px hsl(354, 100%, 66%);
+}
+
+.error-message {
+    position: relative;
+    top: -60px;
+    margin: 0;
+    font-size: 12px;
+    font-style: italic;
+    color:hsl(354, 100%, 66%);
+}
+
+.hidden {
+    display: none;
+}
+
+.illustration {
+    width: 100%;
+}
+
+/* Estilos para el footer */
+
+.footer {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.container-social-networks {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-social-networks a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.container-social-networks a > i {
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+    font-size: 14px;
+    color: hsl(223, 87%, 63%);
+    border: solid .5px hsl(223, 100%, 88%);
+    border-radius: 50%;
+}
+
+.copyright {
+    margin-top: 25px;
+    font-size: 12px;
+    color: hsl(0, 0%, 59%);;
+}
+
+
+/* Estilos para pantallas con un width = o > a 1024px */
+
+@media (min-width: 1024px) {
+    .header,
+    .main {
+        width: 50%;
+    }
+
+    .form {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .email {
+        width: 64%;
+        margin-bottom: initial;
+    }
+
+    .submit {
+        width: 33%;
+    }
+
+    .submit:hover {
+        cursor: pointer;
+        background-color: hsl(223, 100%, 88%);
+    }
+
+    .error-message {
+        top: -20px;
+        left: 20px;
+        font-size: 14px;
+        text-align: start;
+    }
+
+    .container-social-networks a:hover {
+        background-color: hsl(223, 87%, 63%);
+    }
+
+    .container-social-networks a > i:hover {
+        color: hsl(223, 100%, 88%);
+    }
+}
